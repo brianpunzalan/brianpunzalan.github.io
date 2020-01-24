@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/public/introduction-to-reactjs/static/css/main.d1b05096.chunk.css",
-    "main.js": "/public/introduction-to-reactjs/static/js/main.e622d1a8.chunk.js",
-    "main.js.map": "/public/introduction-to-reactjs/static/js/main.e622d1a8.chunk.js.map",
-    "runtime-main.js": "/public/introduction-to-reactjs/static/js/runtime-main.c1d0755d.js",
-    "runtime-main.js.map": "/public/introduction-to-reactjs/static/js/runtime-main.c1d0755d.js.map",
-    "static/js/2.6ad70233.chunk.js": "/public/introduction-to-reactjs/static/js/2.6ad70233.chunk.js",
-    "static/js/2.6ad70233.chunk.js.map": "/public/introduction-to-reactjs/static/js/2.6ad70233.chunk.js.map",
-    "index.html": "/public/introduction-to-reactjs/index.html",
-    "precache-manifest.f7960cdb0ae4df91227c6bb3a2aa61b8.js": "/public/introduction-to-reactjs/precache-manifest.f7960cdb0ae4df91227c6bb3a2aa61b8.js",
-    "service-worker.js": "/public/introduction-to-reactjs/service-worker.js",
-    "static/css/main.d1b05096.chunk.css.map": "/public/introduction-to-reactjs/static/css/main.d1b05096.chunk.css.map",
-    "static/js/2.6ad70233.chunk.js.LICENSE": "/public/introduction-to-reactjs/static/js/2.6ad70233.chunk.js.LICENSE",
-    "static/media/logo.svg": "/public/introduction-to-reactjs/static/media/logo.5d5d9eef.svg"
+    "main.css": "/introduction-to-reactjs/static/css/main.d1b05096.chunk.css",
+    "main.js": "/introduction-to-reactjs/static/js/main.7fe3783f.chunk.js",
+    "main.js.map": "/introduction-to-reactjs/static/js/main.7fe3783f.chunk.js.map",
+    "runtime-main.js": "/introduction-to-reactjs/static/js/runtime-main.94145c18.js",
+    "runtime-main.js.map": "/introduction-to-reactjs/static/js/runtime-main.94145c18.js.map",
+    "static/js/2.6ad70233.chunk.js": "/introduction-to-reactjs/static/js/2.6ad70233.chunk.js",
+    "static/js/2.6ad70233.chunk.js.map": "/introduction-to-reactjs/static/js/2.6ad70233.chunk.js.map",
+    "index.html": "/introduction-to-reactjs/index.html",
+    "precache-manifest.f9a3605d1d1516f7e33924fe8db27dfe.js": "/introduction-to-reactjs/precache-manifest.f9a3605d1d1516f7e33924fe8db27dfe.js",
+    "service-worker.js": "/introduction-to-reactjs/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/introduction-to-reactjs/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.6ad70233.chunk.js.LICENSE": "/introduction-to-reactjs/static/js/2.6ad70233.chunk.js.LICENSE",
+    "static/media/logo.svg": "/introduction-to-reactjs/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.c1d0755d.js",
+    "static/js/runtime-main.94145c18.js",
     "static/js/2.6ad70233.chunk.js",
     "static/css/main.d1b05096.chunk.css",
-    "static/js/main.e622d1a8.chunk.js"
+    "static/js/main.7fe3783f.chunk.js"
   ]
 }
