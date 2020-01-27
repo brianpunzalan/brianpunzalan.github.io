@@ -1,25 +1,59 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled, { createGlobalStyle } from 'styled-components'
+import { Presentation, Slide, DropDownNav, PresenterModePlugin } from 'react-presents'
+
+// Include codemirror default css
+require('codemirror/lib/codemirror.css');
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    margin: 0;
+    padding: 0;
+  }
+`
+
+const Container = styled.div`
+  height: 100vh;
+  width: 100%;
+  padding: 50px;
+  background-color: #000;
+  color: #fff;
+
+  .Select.VirtualizedSelect {
+    color: initial;
+  }
+`
+
+let slides = []
+const context = require.context('./slides', false, /\.jsx|\.js$/)
+context.keys().forEach(key => slides.push(context(key).default))
+
+const options = slides.map((slide, index) => ({
+  label: slide.title,
+  value: index
+}))
+.filter((option) => option.label)
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <GlobalStyle />
+      <Presentation>
+        <PresenterModePlugin />
+        {slides.map((Component, index) => (
+          <Slide
+            component={Component}
+            key={index}
+          />
+        )).concat(
+          <DropDownNav
+            key='DropDownNav'
+            options={options}
+          />
+        )}
+      </Presentation>
+    </Container>
   );
 }
 

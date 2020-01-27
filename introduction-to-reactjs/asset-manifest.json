@@ -1,23 +1,29 @@
 {
   "files": {
-    "main.css": "/introduction-to-reactjs/static/css/main.d1b05096.chunk.css",
-    "main.js": "/introduction-to-reactjs/static/js/main.7fe3783f.chunk.js",
-    "main.js.map": "/introduction-to-reactjs/static/js/main.7fe3783f.chunk.js.map",
+    "main.css": "/introduction-to-reactjs/static/css/main.5ecd60fb.chunk.css",
+    "main.js": "/introduction-to-reactjs/static/js/main.cf2e2292.chunk.js",
+    "main.js.map": "/introduction-to-reactjs/static/js/main.cf2e2292.chunk.js.map",
     "runtime-main.js": "/introduction-to-reactjs/static/js/runtime-main.94145c18.js",
     "runtime-main.js.map": "/introduction-to-reactjs/static/js/runtime-main.94145c18.js.map",
-    "static/js/2.6ad70233.chunk.js": "/introduction-to-reactjs/static/js/2.6ad70233.chunk.js",
-    "static/js/2.6ad70233.chunk.js.map": "/introduction-to-reactjs/static/js/2.6ad70233.chunk.js.map",
+    "static/css/2.7fd08c2a.chunk.css": "/introduction-to-reactjs/static/css/2.7fd08c2a.chunk.css",
+    "static/js/2.ec51c5b1.chunk.js": "/introduction-to-reactjs/static/js/2.ec51c5b1.chunk.js",
+    "static/js/2.ec51c5b1.chunk.js.map": "/introduction-to-reactjs/static/js/2.ec51c5b1.chunk.js.map",
     "index.html": "/introduction-to-reactjs/index.html",
-    "precache-manifest.f9a3605d1d1516f7e33924fe8db27dfe.js": "/introduction-to-reactjs/precache-manifest.f9a3605d1d1516f7e33924fe8db27dfe.js",
+    "precache-manifest.2b04ead7672a07e82c345f6ae7b23783.js": "/introduction-to-reactjs/precache-manifest.2b04ead7672a07e82c345f6ae7b23783.js",
     "service-worker.js": "/introduction-to-reactjs/service-worker.js",
-    "static/css/main.d1b05096.chunk.css.map": "/introduction-to-reactjs/static/css/main.d1b05096.chunk.css.map",
-    "static/js/2.6ad70233.chunk.js.LICENSE": "/introduction-to-reactjs/static/js/2.6ad70233.chunk.js.LICENSE",
-    "static/media/logo.svg": "/introduction-to-reactjs/static/media/logo.5d5d9eef.svg"
+    "static/css/2.7fd08c2a.chunk.css.map": "/introduction-to-reactjs/static/css/2.7fd08c2a.chunk.css.map",
+    "static/css/main.5ecd60fb.chunk.css.map": "/introduction-to-reactjs/static/css/main.5ecd60fb.chunk.css.map",
+    "static/js/2.ec51c5b1.chunk.js.LICENSE": "/introduction-to-reactjs/static/js/2.ec51c5b1.chunk.js.LICENSE",
+    "static/media/client-rendering-tti.png": "/introduction-to-reactjs/static/media/client-rendering-tti.9bd7bf8a.png",
+    "static/media/csr.png": "/introduction-to-reactjs/static/media/csr.00563ed0.png",
+    "static/media/logo.svg": "/introduction-to-reactjs/static/media/logo.5d5d9eef.svg",
+    "static/media/ssr.png": "/introduction-to-reactjs/static/media/ssr.c9772aa2.png"
   },
   "entrypoints": [
     "static/js/runtime-main.94145c18.js",
-    "static/js/2.6ad70233.chunk.js",
-    "static/css/main.d1b05096.chunk.css",
-    "static/js/main.7fe3783f.chunk.js"
+    "static/css/2.7fd08c2a.chunk.css",
+    "static/js/2.ec51c5b1.chunk.js",
+    "static/css/main.5ecd60fb.chunk.css",
+    "static/js/main.cf2e2292.chunk.js"
   ]
 }
