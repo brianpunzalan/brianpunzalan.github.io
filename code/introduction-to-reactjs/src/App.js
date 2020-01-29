@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components'
-import { Presentation, Slide, DropDownNav, PresenterModePlugin } from 'react-presents'
+import { Presentation, Slide, DropDownNav } from 'react-presents'
 
 // Include codemirror default css
 require('codemirror/lib/codemirror.css');
@@ -9,6 +9,10 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
+  }
+
+  code {
+    color: #F92672;
   }
 `
 
@@ -40,7 +44,6 @@ function App() {
     <Container>
       <GlobalStyle />
       <Presentation>
-        <PresenterModePlugin />
         {slides.map((Component, index) => (
           <Slide
             component={Component}

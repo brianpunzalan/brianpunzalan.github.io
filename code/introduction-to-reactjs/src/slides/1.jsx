@@ -51,6 +51,26 @@ foobar('Hello World'); // prints 'Hello World'
 }()); // prints 'Unnamed function'
 `
 
+const callbackFunctionCode =
+`// new to ES6 'async'
+async function fetchData(params, callback) {
+  // execute some asynchronous task
+  const response = await doAsyncCall(params)
+
+  // execute callback after the async call finished
+  return callback(response)
+}
+
+async function doAsyncCall(params) {
+  return params.id
+}
+
+function notify(data) {
+  alert(data)
+}
+
+fetchData({ id: 1 }, notify)`
+
 const arrowFunctionsCode = 
 `// arrow function 'foo'
 const foo = () => 'test'
@@ -223,21 +243,21 @@ const slide = ({ stepIndex }) => (
       />
     </Step>
     <Step index={9} maxIndex={9}>
+      <h2>Callbacks</h2>
+      <Code
+        value={callbackFunctionCode}
+      />
+    </Step>
+    <Step index={10} maxIndex={10}>
       <h2>ES6 features - Arrow functions</h2>
       <Code
         value={arrowFunctionsCode}
       />
     </Step>
-    <Step index={10} maxIndex={10}>
+    <Step index={11} maxIndex={11}>
       <h2>ES6 features - Parameter Handling</h2>
       <Code
         value={parameterHandlingCode}
-      />
-    </Step>
-    <Step index={11} maxIndex={11}>
-      <h2>ES6 features - Classes</h2>
-      <Code
-        value={classesCode}
       />
     </Step>
     <Step index={12} maxIndex={12}>
@@ -247,6 +267,12 @@ const slide = ({ stepIndex }) => (
       />
     </Step>
     <Step index={13} maxIndex={13}>
+      <h2>ES6 features - Classes</h2>
+      <Code
+        value={classesCode}
+      />
+    </Step>
+    <Step index={14} maxIndex={14}>
       <h2>ES6 features - Modules</h2>
       <Code
         value={modulesCode}
