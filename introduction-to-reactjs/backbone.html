@@ -1,0 +1,40 @@
+<html>
+  <body>
+    <div id="root"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.4.0/backbone-min.js"></script>
+    <script> 
+      var app = {}
+      var MyModel = {}
+
+      $(document).ready(function () {
+        app.model = Backbone.Model.extend({
+          defaults: {
+            title: 'Hello World'
+          }
+        })
+
+        app.view = Backbone.View.extend({
+          tagName: 'h1',
+          el: '#root',
+          initialize: function () {
+            this.listenTo(this.model, 'change', this.render);
+            this.render();
+          },
+          render: function () {
+            this.$el.html(this.model.get('title'));
+            return this;
+          }
+        })
+
+        MyModel = new app.model()
+
+        new app.view({ model: MyModel })
+      });
+
+      // Update model to update view
+      // MyModel.set('title', 'Hello Brian!')
+    </script>
+  </body>
+</html>
