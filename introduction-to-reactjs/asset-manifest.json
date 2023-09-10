@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/introduction-to-reactjs/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/introduction-to-reactjs/static/js/main.20fe7e5d.chunk.js",
-    "main.js.map": "/introduction-to-reactjs/static/js/main.20fe7e5d.chunk.js.map",
+    "main.css": "/introduction-to-reactjs/static/css/main.69eda509.chunk.css",
+    "main.js": "/introduction-to-reactjs/static/js/main.f5518346.chunk.js",
+    "main.js.map": "/introduction-to-reactjs/static/js/main.f5518346.chunk.js.map",
     "runtime-main.js": "/introduction-to-reactjs/static/js/runtime-main.94145c18.js",
     "runtime-main.js.map": "/introduction-to-reactjs/static/js/runtime-main.94145c18.js.map",
     "static/css/2.7fd08c2a.chunk.css": "/introduction-to-reactjs/static/css/2.7fd08c2a.chunk.css",
     "static/js/2.6e1900f7.chunk.js": "/introduction-to-reactjs/static/js/2.6e1900f7.chunk.js",
     "static/js/2.6e1900f7.chunk.js.map": "/introduction-to-reactjs/static/js/2.6e1900f7.chunk.js.map",
     "index.html": "/introduction-to-reactjs/index.html",
-    "precache-manifest.e688617d20d398ddf7f5a1cec269de4f.js": "/introduction-to-reactjs/precache-manifest.e688617d20d398ddf7f5a1cec269de4f.js",
+    "precache-manifest.f6403d7e5829d4de86c08356e2d6a790.js": "/introduction-to-reactjs/precache-manifest.f6403d7e5829d4de86c08356e2d6a790.js",
     "service-worker.js": "/introduction-to-reactjs/service-worker.js",
     "static/css/2.7fd08c2a.chunk.css.map": "/introduction-to-reactjs/static/css/2.7fd08c2a.chunk.css.map",
-    "static/css/main.5ecd60fb.chunk.css.map": "/introduction-to-reactjs/static/css/main.5ecd60fb.chunk.css.map",
+    "static/css/main.69eda509.chunk.css.map": "/introduction-to-reactjs/static/css/main.69eda509.chunk.css.map",
     "static/js/2.6e1900f7.chunk.js.LICENSE": "/introduction-to-reactjs/static/js/2.6e1900f7.chunk.js.LICENSE",
     "static/media/client-rendering-tti.png": "/introduction-to-reactjs/static/media/client-rendering-tti.9bd7bf8a.png",
     "static/media/csr.png": "/introduction-to-reactjs/static/media/csr.00563ed0.png",
     "static/media/databinding.jpg": "/introduction-to-reactjs/static/media/databinding.c5e01c2e.jpg",
-    "static/media/logo.svg": "/introduction-to-reactjs/static/media/logo.5d5d9eef.svg",
+    "static/media/logo.svg": "/introduction-to-reactjs/static/media/logo.ee7cd8ed.svg",
     "static/media/react-lifecycle.PNG": "/introduction-to-reactjs/static/media/react-lifecycle.3eb829c9.PNG",
     "static/media/ssr.png": "/introduction-to-reactjs/static/media/ssr.c9772aa2.png"
   },
@@ -25,7 +25,7 @@
     "static/js/runtime-main.94145c18.js",
     "static/css/2.7fd08c2a.chunk.css",
     "static/js/2.6e1900f7.chunk.js",
-    "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.20fe7e5d.chunk.js"
+    "static/css/main.69eda509.chunk.css",
+    "static/js/main.f5518346.chunk.js"
   ]
 }

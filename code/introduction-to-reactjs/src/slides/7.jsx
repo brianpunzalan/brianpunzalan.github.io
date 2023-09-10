@@ -109,6 +109,30 @@ const propsStateCode =
 
 render(<Tick initialCount={10} />)`
 
+const propsStateCodeFunctional =
+`const Tick = (props) => {
+  const { initialCount } = props;
+  const [count, setCount] = React.useState(initialCount || 0);
+  const tick = React.useCallback(() => {
+    setCount((_count) => _count + 1);
+  }, []);
+  const startTick = React.useCallback(() => {
+    return setInterval(() => tick(), 1000);
+  }, [tick]);
+
+  React.useEffect(() => {
+    const tickInterval = startTick();
+
+    return () => {
+      clearInterval(tickInterval);
+    }
+  }, []);
+
+  return <p>{count}</p>
+}
+
+render(<Tick initialCount={10} />)`
+
 const eventHandlingCode =
 `class Tick extends React.Component {
   constructor(props) {
@@ -136,6 +160,27 @@ const eventHandlingCode =
       </div>
     )
   }
+}
+
+render(<Tick initialCount={10} disabled={true} />)`
+
+const eventHandlingCodeFunctional =
+`const Tick = (props) => {
+  const { initialCount, disabled } = props;
+  const [count, setCount] = React.useState(initialCount || 0);
+  const tick = React.useCallback(() => {
+    setCount((_count) => _count + 1);
+  }, []);
+  const handleClick = React.useCallback(() => {
+    tick();
+  }, [tick]);
+
+  return (
+    <div>
+      <p>{count}</p>
+      <button disabled={disabled} onClick={handleClick}>Add 1</button>
+    </div>
+  )
 }
 
 render(<Tick initialCount={10} disabled={true} />)`
@@ -175,6 +220,29 @@ const conditionalRenderingCode =
 
 render(<Tick initialCount={10} disabled={true} show={true} />)`
 
+const conditionalRenderingCodeFunctional =
+`const Tick = (props) => {
+  const { initialCount, show, disabled } = props;
+  const [count, setCount] = React.useState(initialCount || 0);
+  const tick = React.useCallback(() => {
+    setCount((_count) => _count + 1);
+  }, []);
+  const handleClick = React.useCallback(() => {
+    tick();
+  }, [tick]);
+  const isCountEven = count % 2 === 0;
+
+  return (
+    <div>
+      { show && <p>{count}</p>}
+      { isCountEven ? <p>Even</p> : <p>Odd</p>}
+      <button disabled={disabled} onClick={handleClick}>Add 1</button>
+    </div>
+  )
+}
+
+render(<Tick initialCount={10} disabled={true} show={true} />)`
+
 const listsAndKeysCode = 
 `class ItemList extends React.Component {
   render() {
@@ -189,6 +257,31 @@ const listsAndKeysCode =
       </ul>
     )
   }
+}
+
+render(
+  <ItemList 
+    items={[
+      { id: '0001', value: 'Item One' },
+      { id: '0002', value: 'Item Two' },
+      { id: '0003', value: 'Item Three' },
+    ]}
+  />
+)`
+
+const listsAndKeysCodeFunctional = 
+`const ItemList = (props) => {
+  const { items } = props;
+  return (
+    <ul>
+      {
+        items.map(item => {
+          // Always pass a 'key' if you want to render an array nodes
+          return <li key={item.id}>{item.value}</li>
+        })
+      }
+    </ul>
+  )
 }
 
 render(
@@ -244,6 +337,45 @@ const formsCode =
 
 render(<Form />)`
 
+const formsCodeFunctional = 
+`const Form = () => {
+  const [state, setState] = React.useState({
+    name: '',
+    email: '',
+  });
+  const handleChange = React.useCallback((e) => {
+    // Prevents React from resetting its properties with event pooling (only for React 16 and earlier)
+    e.persist();
+
+    setState((_state) => {
+      return {
+        ..._state,
+        [e.target.name]: e.target.value,
+      }
+    })
+  }, []);
+  const handleSubmit = React.useCallback((e) => {
+    e.preventDefault();
+    alert(\`Name: $\{state.name}, Email: $\{state.email}\`);
+  }, [state]);
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <label inputFor="name">
+        Name
+        <input name="name" type="text" value={state.name} onChange={handleChange} />
+      </label>
+      <label inputFor="email">
+        Email
+        <input name="email" type="email" value={state.email} onChange={handleChange} />
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+  )
+}
+
+render(<Form />)`
+
 const compositionCode = 
 `class Textfield extends React.Component {
   render() {
@@ -281,6 +413,45 @@ class Form extends React.Component {
       </form>
     )
   }
+}
+
+render(<Form />)`
+
+const compositionCodeFunctional = 
+`const TextField = (props) => {
+  const { value, ...textFieldProps } = props;
+
+  return (
+    <div>
+      <input type="text" value={value} {...textFieldProps} />
+      <br />
+      <br />
+      <p>{value}</p>
+    </div>
+  )
+}
+
+const Form = () => {
+  const [state, setState] = React.useState({
+    name: "Brian",
+  });
+  const handleChange = React.useCallback((e) => {
+    // Prevents React from resetting its properties with event pooling (only for React 16 and earlier)
+    e.persist();
+
+    setState((_state) => {
+      return {
+        ..._state,
+        [e.target.name]: e.target.value,
+      }
+    })
+  }, []);
+
+  return (
+    <form>
+      <TextField value={state.name} name="name" onChange={handleChange} />
+    </form>
+  )
 }
 
 render(<Form />)`
@@ -396,7 +567,7 @@ const slide = () => (
       <h2>Props and State</h2>
       <p><Colored>Props</Colored> are read-only values and these are the "parameters" to a React Component, just like a function</p>
       <p><Colored>States</Colored> are internal state values of a React Component. It is private and fully controlled by the component.</p>
-      <LiveProvider code={propsStateCode} noInline={true}>
+      <LiveProvider code={propsStateCodeFunctional} noInline={true}>
         <LiveContainer>
           <LiveEditor 
             style={{
@@ -425,7 +596,7 @@ const slide = () => (
     </Step>
     <Step index={10} maxIndex={10}>
       <h2>Event Handling</h2>
-      <LiveProvider code={eventHandlingCode} noInline={true}>
+      <LiveProvider code={eventHandlingCodeFunctional} noInline={true}>
         <LiveContainer>
           <LiveEditor 
             style={{
@@ -447,7 +618,7 @@ const slide = () => (
     </Step>
     <Step index={11} maxIndex={11}>
       <h2>Conditional Rendering</h2>
-      <LiveProvider code={conditionalRenderingCode} noInline={true}>
+      <LiveProvider code={conditionalRenderingCodeFunctional} noInline={true}>
         <LiveContainer>
           <LiveEditor 
             style={{
@@ -469,7 +640,7 @@ const slide = () => (
     </Step>
     <Step index={12} maxIndex={12}>
       <h2>Rendering Lists and Keys</h2>
-      <LiveProvider code={listsAndKeysCode} noInline={true}>
+      <LiveProvider code={listsAndKeysCodeFunctional} noInline={true}>
         <LiveContainer>
           <LiveEditor 
             style={{
@@ -491,17 +662,18 @@ const slide = () => (
     </Step>
     <Step index={13} maxIndex={13}>
       <h2>Forms</h2>
-      <LiveProvider code={formsCode} noInline={true}>
+      <LiveProvider code={formsCodeFunctional} noInline={true}>
         <LiveContainer>
           <LiveEditor 
             style={{
-              width: '50%',
-              backgroundColor: 'rgb(50, 42, 56)'
+              width: '65%',
+              backgroundColor: 'rgb(50, 42, 56)',
+              fontSize: '14px'
             }}
           />
           <LivePreview 
             style={{
-              width: '50%',
+              width: '35%',
               padding: '15px',
               backgroundColor: '#fff',
               color: '#000'
@@ -513,12 +685,13 @@ const slide = () => (
     </Step>
     <Step index={14} maxIndex={14}>
       <h2>Composition</h2>
-      <LiveProvider code={compositionCode} noInline={true}>
+      <LiveProvider code={compositionCodeFunctional} noInline={true}>
         <LiveContainer>
           <LiveEditor 
             style={{
               width: '50%',
-              backgroundColor: 'rgb(50, 42, 56)'
+              backgroundColor: 'rgb(50, 42, 56)',
+              fontSize: '14px'
             }}
           />
           <LivePreview 

@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/advanced-reactjs/static/css/main.ea90fd1d.chunk.css",
+    "main.js": "/advanced-reactjs/static/js/main.46db97a7.chunk.js",
+    "main.js.map": "/advanced-reactjs/static/js/main.46db97a7.chunk.js.map",
+    "runtime-main.js": "/advanced-reactjs/static/js/runtime-main.af77455c.js",
+    "runtime-main.js.map": "/advanced-reactjs/static/js/runtime-main.af77455c.js.map",
+    "static/css/2.7fd08c2a.chunk.css": "/advanced-reactjs/static/css/2.7fd08c2a.chunk.css",
+    "static/js/2.9352b4d7.chunk.js": "/advanced-reactjs/static/js/2.9352b4d7.chunk.js",
+    "static/js/2.9352b4d7.chunk.js.map": "/advanced-reactjs/static/js/2.9352b4d7.chunk.js.map",
+    "index.html": "/advanced-reactjs/index.html",
+    "precache-manifest.b973017eff87a2804ac1bdb40d0afadb.js": "/advanced-reactjs/precache-manifest.b973017eff87a2804ac1bdb40d0afadb.js",
+    "service-worker.js": "/advanced-reactjs/service-worker.js",
+    "static/css/2.7fd08c2a.chunk.css.map": "/advanced-reactjs/static/css/2.7fd08c2a.chunk.css.map",
+    "static/css/main.ea90fd1d.chunk.css.map": "/advanced-reactjs/static/css/main.ea90fd1d.chunk.css.map",
+    "static/js/2.9352b4d7.chunk.js.LICENSE": "/advanced-reactjs/static/js/2.9352b4d7.chunk.js.LICENSE",
+    "static/media/logo.svg": "/advanced-reactjs/static/media/logo.ee7cd8ed.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.af77455c.js",
+    "static/css/2.7fd08c2a.chunk.css",
+    "static/js/2.9352b4d7.chunk.js",
+    "static/css/main.ea90fd1d.chunk.css",
+    "static/js/main.46db97a7.chunk.js"
+  ]
+}
